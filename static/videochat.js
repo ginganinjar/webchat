@@ -26,7 +26,6 @@ function success(mediaStream){
 function errorCallback(e){
 	alert('Something wrong happened:'+e.toString());
 }
-var remoteUser = '';	
 $('#connect').on('click',function(){
 	if(!isStarted){
 		remoteUser = $('#remoteUser').val();
