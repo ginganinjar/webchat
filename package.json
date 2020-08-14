@@ -16,7 +16,7 @@
     "video",
     "chat"
   ],
-  "author": "Sumit Majumdar",
+  "author": "Dave",
   "license": "MIT",
   "engines": {
     "node": "0.10.x"
