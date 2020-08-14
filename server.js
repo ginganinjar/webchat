@@ -10,7 +10,8 @@ app.use(express.static(__dirname+'/static/'));
 app.get('/',function(req,res){
 	res.sendFile(__dirname+'/static/index.html');
 });
-io.sockets.on('connection',function(socket){
+try {
+	io.sockets.on('connection',function(socket){
 	console.log('A user has connected!');
 	socket.on('new user',function(data,callback){
 		console.log('user wants to connect as '+data);
@@ -30,7 +31,8 @@ io.sockets.on('connection',function(socket){
 		if(!socket.username)
 			return;
 		delete userlist[socket.username];
-	//	socket.disconnect();
+		//io.sockets.disconnect();
+		console.log(socket);
 		updateUserList();
 	});
 	socket.on('new message',function(data){
@@ -66,3 +68,9 @@ io.sockets.on('connection',function(socket){
 		io.sockets.emit('answersdp',data);
 	});
 });
+}
+
+catch(err) {
+	console.log("error");
+	io.sockets.disconnect();
+  }
