@@ -30,6 +30,7 @@ io.sockets.on('connection',function(socket){
 		if(!socket.username)
 			return;
 		delete userlist[socket.username];
+	//	socket.disconnect();
 		updateUserList();
 	});
 	socket.on('new message',function(data){
