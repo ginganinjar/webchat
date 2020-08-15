@@ -1,21 +1,16 @@
 {
-  "name": "free-video-calls",
-  "version": "1.0.0",
-  "description": "A simple live chat application",
+  "name": "socket.io-chat",
+  "version": "0.0.0",
+  "description": "A simple chat client using socket.io",
+  "main": "index.js",
+  "author": "Grant Timmerman",
+  "private": true,
+  "license": "BSD",
   "dependencies": {
-    "express": "^4.17.1",
-    "socket.io": "^2.3.0"
+    "express": "~4.17.1",
+    "socket.io": "~2.3.0"
   },
   "scripts": {
-    "start": "node server.js"
-  },
-  "main": "server.js",
-  "devDependencies": {},
-  "keywords": [
-    "webrtc",
-    "video",
-    "chat"
-  ],
-  "author": "Dave",
-  "license": "MIT"
+    "start": "node index.js"
+  }
 }
